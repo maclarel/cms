@@ -15,3 +15,7 @@
   </strong>
   <%= @article.description %>
 </p>
+
+<%= button_to 'Edit', edit_article_path(@article), method: :get %>
+<%= button_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= button_to 'Return to articles listing', articles_path, method: :get %>
