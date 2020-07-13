@@ -1,8 +1,0 @@
-<% if @article.errors.any? %>
-  <h2>Article creation failed with the following errors:</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-        <li> <%= msg %>
-    <% end %>
-  </ul>
-<% end %>
