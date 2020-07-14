@@ -8,7 +8,6 @@
       <li class="nav-item active">
 
       </li>
-
       <li class="nav-item">
         <%= link_to "Bloggers", users_path, class:"nav-link" %>
       </li>
@@ -22,7 +21,12 @@
           <%= link_to "Create new article", new_article_path, class:"dropdown-item" %>
         </div>
       </li>
-
+      <li class="nav-item">
+        <%= link_to "Log in", login_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Log out", logout_path, class:"nav-link", method: :delete %>
+      </li>
       <!--
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" ariadisabled="true">Disabled</a>
