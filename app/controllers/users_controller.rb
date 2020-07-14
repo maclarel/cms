@@ -33,6 +33,11 @@ class UsersController < ApplicationController
     @articles = @user.articles
   end
 
+  def index
+    @user = User.all
+  end
+
+
   private
 
   def user_params
