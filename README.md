@@ -1,15 +1,6 @@
-# Alpha Blog
+# CMS
 
-Rails 6 and Bootstrap for [The Complete Ruby on Rails Developer Course](https://github.udemy.com/course/the-complete-ruby-on-rails-developer-course).
-
-This is a multi-user blog supporting interactive account signup, profile management, article creation/editing/deletion, and the ability to promote a user to having `admin` privileges via the `admin` attribute:
-
-```
-2.6.3 :007 > user
- => #<User id: 14, username: "admin", email: "admin@test.com", created_at: "2020-07-14 19:58:15", updated_at: "2020-07-14 19:58:23", password_digest: [FILTERED], admin: true>
-2.6.3 :008 > user.admin?
- => true
- ```
+Rails 6 and Bootstrap CMS for handling customer/engineer assignments
  
 To run:
 
