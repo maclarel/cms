@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to "Logan's Blog", root_path, class:"navbar-brand", id: "logo" %>
+  <%= link_to "Account Assigner", root_path, class:"navbar-brand", id: "logo" %>
   <button class="navbar-toggler" type="button" datatoggle="collapse" data-target="#navbarSupportedContent" ariacontrols="navbarSupportedContent" aria-expanded="false" arialabel="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,30 +9,19 @@
 
       </li>
       <li class="nav-item">
-        <%= link_to "Bloggers", users_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#"id="navbarDropdown" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
-          Articles
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to "All articles", articles_path, class:"dropdown-item" %>
-          <% if logged_in? %>
-            <div class="dropdown-divider"></div>
-            <%= link_to "Create new article", new_article_path, class:"dropdown-item" %>
-          <% end %>
-        </div>
+        <%= link_to "Accounts", accounts_path, class:"nav-link" %>
       </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#"id="navbarDropdown" role="button" data-toggle="dropdown"aria-haspopup="true" aria-expanded="false">
-          Categories
+          Management
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to "All categories", categories_path, class:"dropdown-item" %>
           <% if logged_in? && current_user.admin? %>
             <div class="dropdown-divider"></div>
-            <%= link_to "Create new category", new_category_path, class:"dropdown-item" %>
+            <%= link_to "Add an account", new_category_path, class:"dropdown-item" %>
+            <%= link_to "Update an account", new_category_path, class:"dropdown-item" %>
+            <%= link_to "Remove an account", new_category_path, class:"dropdown-item" %>
           <% end %>
         </div>
       </li>
@@ -56,17 +45,5 @@
           <%= link_to "Sign up", signup_path, class: "nav-link" %>
         </li>
       <% end %>
-
-
-      <!--
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" ariadisabled="true">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search"placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0"type="submit">Search</button>
-    </form>
-    -->
   </div>
 </nav>
